@@ -2,7 +2,7 @@
 
 SmartPOS is a web-based Point of Sale and ERP Management System developed to help businesses manage sales, products, inventory, customers, suppliers, users, and reports from a single system.
 
-The project is developed using PHP, MySQL, Bootstrap, HTML, CSS, and JavaScript and is designed to be simple, responsive, and easy to use.
+The project is developed using PHP, MySQL, Bootstrap, HTML, CSS, and JavaScript and is designed to be simple, responsive, and easy to use. User can use this application by using desktop icon.
 
 ---
 
