@@ -1,0 +1,46 @@
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# PHP / server logs
+*.log
+error_log
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# XAMPP / local server files
+xampp/
+htdocs/
+
+# Database dumps
+*.sql
+*.sql.gz
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+
+# Uploads / generated files
+uploads/*
+storage/*
+cache/*
+tmp/*
+
+# PHP Composer
+/vendor/
+
+# Node
+/node_modules/
+
+# Local configuration
+config/local.php
+config/database.local.php

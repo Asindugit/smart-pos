@@ -1,0 +1,790 @@
+:root {
+    --sidebar-width: 250px;
+}
+
+/* =========================================
+   GLOBAL
+   ========================================= */
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    background: #f5f7fb;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+
+.navbar {
+    min-height: 64px;
+}
+
+
+/* =========================================
+   SIDEBAR
+   ========================================= */
+
+.sidebar {
+    width: var(--sidebar-width);
+    background: #ffffff;
+    border-right: 1px solid #dee2e6;
+}
+
+.sidebar-content {
+    padding: 20px 14px;
+}
+
+.sidebar-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: #8a94a6;
+    letter-spacing: 0.08em;
+    padding: 10px 14px 7px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 14px;
+    margin-bottom: 4px;
+    color: #4b5563;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.sidebar-link i {
+    font-size: 17px;
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar-link:hover {
+    background: #f1f5f9;
+    color: #0d6efd;
+}
+
+.sidebar-link.active {
+    background: #eaf2ff;
+    color: #0d6efd;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   MAIN WRAPPER
+   ========================================= */
+
+.main-wrapper {
+    min-height: calc(100vh - 64px);
+}
+
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+
+.main-content {
+    width: 100%;
+    min-height: calc(100vh - 64px);
+    background: #f8f9fa;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   DESKTOP SIDEBAR + CONTENT
+   ========================================= */
+
+@media (min-width: 992px) {
+
+    .main-wrapper {
+        margin-left: var(--sidebar-width);
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 64px;
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
+        overflow-y: auto;
+    }
+
+}
+
+
+/* =========================================
+   TABLET / MOBILE
+   ========================================= */
+
+@media (max-width: 991.98px) {
+
+    .main-wrapper {
+        margin-left: 0;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 280px;
+    }
+
+}
+
+
+/* =========================================
+   DASHBOARD CARDS
+   ========================================= */
+
+.dashboard-card {
+    border: 0;
+    border-radius: 14px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-card .card-header {
+    border-radius: 14px 14px 0 0;
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 22px;
+}
+
+
+/* =========================================
+   TABLES
+   ========================================= */
+
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    font-size: 13px;
+    font-weight: 600;
+    color: #6b7280;
+    white-space: nowrap;
+}
+
+.table tbody td {
+    font-size: 14px;
+}
+
+
+/* =========================================
+   LOGIN PAGE
+   ========================================= */
+
+.login-page {
+    min-height: 100vh;
+    background: #f5f7fb;
+}
+
+.login-card {
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.login-logo {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: #0d6efd;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.login-card .form-control,
+.login-card .input-group-text {
+    min-height: 46px;
+}
+
+.login-card .form-control:focus {
+    box-shadow: none;
+    border-color: #0d6efd;
+}
+
+
+/* =========================================================
+   DASHBOARD HEADER
+   ========================================================= */
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-title-icon {
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #eaf2ff;
+    color: #0d6efd;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.dashboard-date {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 14px;
+    background: #ffffff;
+    border: 1px solid #e1e7ef;
+    border-radius: 9px;
+    color: #495057;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   STAT CARDS
+   ========================================================= */
+
+.stat-card {
+    position: relative;
+    overflow: hidden;
+    border: 0;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.05);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 22px rgba(0, 0, 0, 0.09);
+}
+
+
+/* Colored top borders */
+
+.stat-card-blue {
+    border-top: 4px solid #0d6efd;
+}
+
+.stat-card-green {
+    border-top: 4px solid #198754;
+}
+
+.stat-card-cyan {
+    border-top: 4px solid #0dcaf0;
+}
+
+.stat-card-red {
+    border-top: 4px solid #dc3545;
+}
+
+
+/* Stat label */
+
+.stat-label {
+    color: #6c757d;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* Stat number */
+
+.stat-value {
+    color: #212529;
+    font-size: 25px;
+    letter-spacing: -0.5px;
+}
+
+
+/* Stat icons */
+
+.stat-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+    font-size: 22px;
+}
+
+.stat-icon-blue {
+    background: #eaf2ff;
+    color: #0d6efd;
+}
+
+.stat-icon-green {
+    background: #e8f7ef;
+    color: #198754;
+}
+
+.stat-icon-cyan {
+    background: #e6faff;
+    color: #0aa2c0;
+}
+
+.stat-icon-red {
+    background: #fff0f1;
+    color: #dc3545;
+}
+
+
+/* Stat footer */
+
+.stat-footer {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.stat-footer i {
+    margin-right: 5px;
+}
+
+.stat-footer-blue {
+    color: #0d6efd;
+}
+
+.stat-footer-green {
+    color: #198754;
+}
+
+.stat-footer-cyan {
+    color: #0aa2c0;
+}
+
+.stat-footer-red {
+    color: #dc3545;
+}
+
+
+/* =========================================================
+   DASHBOARD SECTION HEADER
+   ========================================================= */
+
+.dashboard-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    background: #ffffff;
+    border: 0;
+}
+
+.section-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+.section-icon-blue {
+    background: #eaf2ff;
+    color: #0d6efd;
+}
+
+.section-icon-red {
+    background: #fff0f1;
+    color: #dc3545;
+}
+
+.dashboard-view-btn {
+    border-radius: 7px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   DASHBOARD TABLE
+   ========================================================= */
+
+.dashboard-table thead {
+    background: #f8f9fc;
+}
+
+.dashboard-table thead th {
+    padding: 13px 24px;
+    border-bottom: 1px solid #e9ecef;
+    color: #6c757d;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.dashboard-table tbody td {
+    padding: 15px 24px;
+    border-bottom: 1px solid #f0f2f5;
+}
+
+.dashboard-table tbody tr {
+    transition: background 0.15s ease;
+}
+
+.dashboard-table tbody tr:hover {
+    background: #f8fbff;
+}
+
+.dashboard-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+
+/* Invoice */
+
+.invoice-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 9px;
+    border-radius: 7px;
+    background: #eaf2ff;
+    color: #0d6efd;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* Cashier */
+
+.cashier-info {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.cashier-avatar {
+    width: 31px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #eef1f5;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+
+/* Sale date */
+
+.sale-date {
+    color: #6c757d;
+    font-size: 13px;
+}
+
+
+/* Sale total */
+
+.sale-total {
+    color: #198754;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   LOW STOCK
+   ========================================================= */
+
+.stock-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #edf0f3;
+}
+
+.stock-item:last-of-type {
+    border-bottom: 0;
+}
+
+.stock-product {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    min-width: 0;
+}
+
+.stock-product-icon {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: #fff0f1;
+    color: #dc3545;
+}
+
+.stock-name {
+    max-width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.stock-danger {
+    color: #dc3545;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.stock-min {
+    color: #8a94a6;
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   EMPTY STATES
+   ========================================================= */
+
+.empty-state {
+    padding: 10px;
+}
+
+.empty-icon {
+    width: 52px;
+    height: 52px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #eef5ff;
+    color: #0d6efd;
+    font-size: 22px;
+}
+
+.empty-stock {
+    text-align: center;
+    padding: 35px 10px;
+}
+
+.empty-stock-icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e8f7ef;
+    color: #198754;
+    font-size: 25px;
+}
+
+
+/* =========================================================
+   QUICK ACTIONS
+   ========================================================= */
+
+.quick-action {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 78px;
+    padding: 15px;
+    background: #ffffff;
+    border: 1px solid #e5e9ef;
+    border-radius: 12px;
+    color: #212529;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    transition: all 0.2s ease;
+}
+
+.quick-action:hover {
+    transform: translateY(-2px);
+    color: #212529;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+}
+
+.quick-action-icon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 19px;
+}
+
+.quick-action strong {
+    display: block;
+    font-size: 13px;
+}
+
+.quick-action small {
+    display: block;
+    margin-top: 2px;
+    color: #8a94a6;
+    font-size: 11px;
+}
+
+
+/* Quick action colors */
+
+.quick-action-blue .quick-action-icon {
+    background: #eaf2ff;
+    color: #0d6efd;
+}
+
+.quick-action-green .quick-action-icon {
+    background: #e8f7ef;
+    color: #198754;
+}
+
+.quick-action-cyan .quick-action-icon {
+    background: #e6faff;
+    color: #0aa2c0;
+}
+
+.quick-action-purple .quick-action-icon {
+    background: #f1edff;
+    color: #6f42c1;
+}
+
+
+/* =========================================================
+   MOBILE DASHBOARD
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .dashboard-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .dashboard-date {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .stat-value {
+        font-size: 22px;
+    }
+
+    .stat-icon {
+        width: 46px;
+        height: 46px;
+        font-size: 20px;
+    }
+
+    .dashboard-section-header {
+        padding: 18px 18px;
+    }
+
+    .dashboard-table thead th {
+        padding: 11px 15px;
+    }
+
+    .dashboard-table tbody td {
+        padding: 13px 15px;
+    }
+
+    .stock-name {
+        max-width: 140px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 575.98px) {
+
+    .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .dashboard-card {
+        border-radius: 12px;
+    }
+
+    .login-card {
+        border-radius: 14px;
+    }
+
+    .dashboard-title-icon {
+        width: 34px;
+        height: 34px;
+    }
+
+    .dashboard-section-header {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .dashboard-view-btn {
+        white-space: nowrap;
+    }
+
+    .cashier-info {
+        min-width: 120px;
+    }
+
+    .cashier-avatar {
+        display: none;
+    }
+
+    .sale-date {
+        white-space: nowrap;
+        font-size: 11px;
+    }
+
+    .invoice-badge {
+        font-size: 11px;
+    }
+
+    .sale-total {
+        font-size: 12px;
+    }
+
+    .quick-action {
+        min-height: 72px;
+        padding: 12px;
+    }
+
+}
